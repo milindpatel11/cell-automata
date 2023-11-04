@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>  Elementary Cellular Automata </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to Wierd Cellular game, Numbnuts !! </h1>
+        <h3> Choose you numbers, Nerds !! Or Don't. </h3>
+        <div class="main_container flex-col">
+          <div class= "flex-col">
+                <div class="flex-col control">
+                  <label> Seed/Rule for Next Gen Growth ( 0 <= r <= 255):
+                   <p class='rule-label bold'  id='seed_label'>
+                      Current Rule: 18
+                   </p>
+                  <input type="range"  value=""
+                    id="seed-rule" name="seed-rule" 
+                    min=0 max=255
+                    onchange=handleEnvChange("seed-rule",'r')
+                    oninput=handleEnvChange("seed-rule",'r')
+                    />
+                    <input type="number"  value=""
+                    id="seed-rule-1" name="seed-rule-1" 
+                    min=0 max=255
+                    onchange=handleEnvChange("seed-rule-1",'r')
+                    oninput=handleEnvChange("seed-rule-1",'r')
+                    />
+                  
+                     <p class='zero_margins bold'>
+                       ----------------------------------------------------------------------------------------
+                     </p>
+                  </label>
+
+                  <label> Number of Cells - Population ( 12 <= p <= 25):
+                  <input type="number" value="" 
+                  id="cell-pop" name="cell-pop"
+                  min=12 max=25
+                  onchange=handleEnvChange("cell-pop",'p') />
+                  </label>
+                  
+                  <label> Number of Generations - Cycles ( 8 <= g <= 40)::
+                  <input type="number" value="" 
+                  id="num-gens" name="num-gens"
+                  min=8 max=40
+                  onchange=handleEnvChange("num-gens",'g') />
+                  </label>
+                 
+                  <label id='dynamic_limit'> First cell Position - Cycles ( 0 <= o < p ):
+                  <input type="number" value=7 
+                  id="first-live" name="first-live"
+                  min=0 max="14"
+                  onchange=handleEnvChange("first-live",'o') />
+                  </label>
+                  
+                   <label
+                   <div id='simulate-bttn' class='flex-row' > 
+                     <p class='zero_margins'>
+                       Simulate how different starting position for first alive cell animate (instead of just starting from middle cell).. 
+                     </p>
+                     <button id='simulate' onClick=handleSimClick()
+                       class='simulate'> 
+                       Simulate 
+                      </button>
+                   </div>
+                 </label
+               </div>
+                <div class= "flex-col">
+                 <h3> Zeroth Generation</h3>
+                 <div class="flex-row" > 
+                   <div id="zero-gen-container" class='flex'>
+                   </div>
+                 </div>
+                 <h3> All Generations</h3>
+                 <div class="flex-row" >
+                   <div id="all-gens-container" class='flex'> 
+                   </div>
+                 </div>
+               </div>
+               
+          </div>
+          <div class='flex-col'>
+            <p>
+              Ugly, Hacky and Unstable Source Code:  
+              <a href='https://github.com/milindpatel11/cell-automata' target='_blank'> Gihub Repo </a>
+            </p>
+          </div>
+       </div>
+          
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
