@@ -1,0 +1,91 @@
+.main_container{
+  background-color: white;
+}
+
+.flex{
+  display: flex !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.flex-row {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.one_gen {
+  display: flex;
+  flex-direction: row;
+  min-width: 200px;
+}
+
+.all-gens {
+  display: flex;
+}
+
+.cell-live {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.cell-dead {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.control {
+  padding: 10px;
+  border: 1px solid;
+}
+
+.label-gen {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.flex-space-between{
+  width: 90%;
+  justify-content: space-around;
+}
+
+.zero_margins{
+  margin: 0px;
+}
+
+label{
+  margin: 5px;
+}
+
+.rule-label{
+  margin: 7px 0;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+input[type="range"] {
+  width:400px;
+}
+
+button{
+  margin:5px;
+}
